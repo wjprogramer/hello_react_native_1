@@ -28,16 +28,21 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import HomeScreen from './src/navigation/Home';
+import DetailsScreen from './src/navigation/Details';
 
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }} />
+          <Stack.Screen name="Details" component={DetailsScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 };
 
