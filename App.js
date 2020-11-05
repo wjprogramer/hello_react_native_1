@@ -30,6 +30,7 @@ import {
 import HomeScreen from './src/navigation/Home';
 import DetailsScreen from './src/navigation/Details';
 import CreatePostScreen from './src/navigation/CreatePost';
+import ProfileScreen from './src/navigation/Profile';
 
 const Stack = createStackNavigator();
 
@@ -42,6 +43,7 @@ const App: () => React$Node = () => {
           <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }} />
           <Stack.Screen name="Details" component={DetailsScreen} initialParams={{ itemId: 42 }} />
           <Stack.Screen name="CreatePost" component={CreatePostScreen} />
+          <Stack.Screen name="Profile" component={ProfileScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

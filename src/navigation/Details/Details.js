@@ -81,6 +81,11 @@ function DetailsScreen({ route, navigation }) {
         title="Create post and Get Value"
         onPress={() => navigation.navigate('CreatePost')}
       />
+
+      <Button
+        title="Profile"
+        onPress={() => navigation.navigate('Profile')}
+      />
       
     </View>
   );
