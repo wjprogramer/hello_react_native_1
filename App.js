@@ -9,6 +9,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import {
   SafeAreaView,
@@ -35,11 +36,37 @@ import ProfileScreen from './src/navigation/Profile';
 import FeedScreen from './src/navigation/Feed';
 
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
+
+      {/*  
+        Drawer: 
+
+        - navigation.openDrawer();
+        - navigation.closeDrawer();
+        - navigation.toggleDrawer();
+
+        背後做的事情:
+
+        - navigation.dispatch(DrawerActions.openDrawer());
+        - navigation.dispatch(DrawerActions.closeDrawer());
+        - navigation.dispatch(DrawerActions.toggleDrawer());
+
+        check drawer is open:
+
+        import { useIsDrawerOpen } from '@react-navigation/drawer';
+        const isDrawerOpen = useIsDrawerOpen();
+      */}
+      {/* <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={HomeScreen} />
+          <Drawer.Screen name="Details" component={DetailsScreen} />
+        </Drawer.Navigator>
+      </NavigationContainer> */}
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
@@ -81,7 +108,6 @@ const App = () => {
             }} 
           />
           
-          {/* 改變 header 名稱 */}
           <Stack.Screen name="CreatePost" component={CreatePostScreen} options={({ route }) => ({ title: route.params.name })} />
           
           <Stack.Screen name="Profile" component={ProfileScreen} />
