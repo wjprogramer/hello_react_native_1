@@ -1,0 +1,1 @@
+export const IMG_CHIHIRO_1 = require('./chihiro/chihiro001.jpg'); 

@@ -18,6 +18,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {
+  DetailsHeader
+} from './components';
+
 function DetailsScreen({ route, navigation }) {
   
   // Demo: 路由時傳遞值
@@ -41,6 +45,8 @@ function DetailsScreen({ route, navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       
+      <DetailsHeader />
+
       <Text>Details Screen</Text>
 
       <Text>itemId: {JSON.stringify(itemId)}</Text>
@@ -79,12 +85,19 @@ function DetailsScreen({ route, navigation }) {
       <Text>Get value: {route.params?.post}</Text>
       <Button
         title="Create post and Get Value"
-        onPress={() => navigation.navigate('CreatePost')}
+        onPress={() => navigation.navigate('CreatePost', { name: '改變 header 名稱' })}
       />
+
+      <Text>==============================</Text>
 
       <Button
         title="Profile"
         onPress={() => navigation.navigate('Profile')}
+      />
+
+      <Button
+        title="Update the title"
+        onPress={() => navigation.setOptions({ title: 'Updated!' })}
       />
       
     </View>
