@@ -17,6 +17,7 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
 } from 'react-native';
 
 import {
@@ -51,7 +52,19 @@ const App = () => {
           }}
         >
           
-          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }} />
+          <Stack.Screen 
+            name="Home" 
+            component={HomeScreen} 
+            options={{ 
+              title: 'Overview',
+              headerRight: () => (
+                <Button
+                  onPress={() => alert('This is a button!')}
+                  title="Info"
+                  color="#bbb"
+                />
+              ), 
+            }} />
           
           <Stack.Screen name="Details" 
             component={DetailsScreen} 
