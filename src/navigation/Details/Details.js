@@ -100,6 +100,11 @@ function DetailsScreen({ route, navigation }) {
           title="Update the title"
           onPress={() => navigation.setOptions({ title: 'Updated!' })}
         />
+
+        <Button
+          title="Feed"
+          onPress={() => navigation.navigate('Feed')}
+        />
       
       </View>
     </ScrollView>

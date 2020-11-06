@@ -32,6 +32,7 @@ import HomeScreen from './src/navigation/Home';
 import DetailsScreen from './src/navigation/Details';
 import CreatePostScreen from './src/navigation/CreatePost';
 import ProfileScreen from './src/navigation/Profile';
+import FeedScreen from './src/navigation/Feed';
 
 const Stack = createStackNavigator();
 
@@ -84,6 +85,8 @@ const App = () => {
           <Stack.Screen name="CreatePost" component={CreatePostScreen} options={({ route }) => ({ title: route.params.name })} />
           
           <Stack.Screen name="Profile" component={ProfileScreen} />
+
+          <Stack.Screen name="Feed" component={FeedScreen} />
           
         </Stack.Navigator>
       </NavigationContainer>
