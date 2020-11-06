@@ -29,6 +29,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import SignInScreen from './src/navigation/SignIn';
+import SignUpScreen from './src/navigation/SignUp';
+import ResetPasswordScreen from './src/navigation/ResetPassword';
 import HomeScreen from './src/navigation/Home';
 import DetailsScreen from './src/navigation/Details';
 import CreatePostScreen from './src/navigation/CreatePost';
