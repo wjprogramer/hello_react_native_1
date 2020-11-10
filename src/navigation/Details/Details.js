@@ -105,6 +105,11 @@ function DetailsScreen({ route, navigation }) {
           title="Feed"
           onPress={() => navigation.navigate('Feed')}
         />
+
+        <Button
+          title="Messages"
+          onPress={() => navigation.navigate('Messages')}
+        />
       
       </View>
     </ScrollView>

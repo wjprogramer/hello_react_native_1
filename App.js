@@ -37,6 +37,7 @@ import DetailsScreen from './src/navigation/Details';
 import CreatePostScreen from './src/navigation/CreatePost';
 import ProfileScreen from './src/navigation/Profile';
 import FeedScreen from './src/navigation/Feed';
+import MessagesScreen from './src/navigation/Messages';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -116,6 +117,8 @@ const App = () => {
           <Stack.Screen name="Profile" component={ProfileScreen} />
 
           <Stack.Screen name="Feed" component={FeedScreen} />
+          
+          <Stack.Screen name="Messages" component={MessagesScreen} />
           
         </Stack.Navigator>
       </NavigationContainer>
