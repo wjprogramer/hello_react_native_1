@@ -49,7 +49,7 @@ class MessagesScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <ImageBackground style={[style.center, { height: '50%' }]} source={IMG_CHIHIRO_2}>
+        <ImageBackground style={[style.center, { flex: 1 }]} source={IMG_CHIHIRO_2}>
           <Text style={style.textCenter}>{this.state.controls.name.value}</Text>
         </ImageBackground>
         <ImageBackground style={[style.center, { height: '50%' }]} source={IMG_CHIHIRO_3}>
