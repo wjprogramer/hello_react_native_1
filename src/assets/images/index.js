@@ -17,3 +17,5 @@ export const IMG_NOODLES_LIST = [
 ]
 
 export const IMG_CHIHIRO_1 = require('./chihiro/chihiro001.jpg'); 
+export const IMG_CHIHIRO_2 = require('./chihiro/chihiro002.jpg'); 
+export const IMG_CHIHIRO_3 = require('./chihiro/chihiro003.jpg'); 
