@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
   StyleSheet,
+  Platform,
 } from 'react-native';
 
 import {
@@ -18,7 +19,15 @@ const style = StyleSheet.create({
     color: '#fff',
     backgroundColor: 'rgba(50,50,50,0.3)',
     fontSize: 40,
-    textAlign: 'center'
+    textAlign: 'center',
+    ...Platform.select({
+      ios: {
+        backgroundColor: 'rgba(50,50,50,0.3)',
+      },
+      android: {
+        backgroundColor: 'rgba(50,50,50,0.3)',
+      },
+    })
   },
   textInput: {
     height: 40, 

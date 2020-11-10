@@ -52,7 +52,7 @@ class MessagesScreen extends React.Component {
       <View style={{ flex: 1 }}>
         <ImageBackground style={[style.center, { flex: 1 }]} source={IMG_CHIHIRO_2}>
           <Text style={style.textCenter}>
-            <Text style={{ color: 'orange', fontSize: 12 }}>{Platform.OS === 'ios' ? "IOS\n" : "ANDROID\n"}</Text>
+            <Text style={{ color: 'orange', fontSize: 12 }}>{Platform.OS === 'ios' ? "IOS" : "ANDROID"} {` ${Platform.Version}\n`}</Text>
             {this.state.controls.name.value}
           </Text>
         </ImageBackground>
