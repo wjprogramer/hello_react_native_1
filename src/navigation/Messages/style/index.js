@@ -18,6 +18,7 @@ const style = StyleSheet.create({
     color: '#fff',
     backgroundColor: 'rgba(50,50,50,0.3)',
     fontSize: 40,
+    textAlign: 'center'
   },
   textInput: {
     height: 40, 
