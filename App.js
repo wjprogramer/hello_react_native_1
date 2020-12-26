@@ -37,10 +37,10 @@ import DetailsScreen from './src/navigation/Details';
 import CreatePostScreen from './src/navigation/CreatePost';
 import ProfileScreen from './src/navigation/Profile';
 import FeedScreen from './src/navigation/Feed';
-import MessagesScreen from './src/navigation/Messages';
-
+import MessagesScreen from './src/navigation/Messag
 const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();es';
+
 
 const App = () => {
   return (
